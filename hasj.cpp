@@ -15,6 +15,7 @@ int main() {
     string map[100];
     string result = "";
 
+    // Input M, N, and map
     cin >> M >> N;
     for (int i = 0; i < M; i++) {
         cin >> map[i];
@@ -35,6 +36,8 @@ int main() {
             finishPosY = i;
         }
     }
+
+    // Loop while moving until currentBlock reaches 'E'
     while (currentBlock != 'E') {
         if (currentPosX > 0 && (map[currentPosY][currentPosX - 1] == '.' || map[currentPosY][currentPosX - 1] == 'E')) {
             map[currentPosY][currentPosX] = '-';
@@ -59,6 +62,6 @@ int main() {
         }
     }
 
+    // Output result string
     cout << result << endl;
-
 }
